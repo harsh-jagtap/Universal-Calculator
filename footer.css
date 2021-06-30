@@ -1,0 +1,15 @@
+#footer {
+    background-color: rgb(37 37 37);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 1px;
+}
+
+.foot {
+    margin: 0px 25px;
+}

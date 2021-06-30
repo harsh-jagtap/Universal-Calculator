@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshree Development-calculator</title>
+    <!-- navbar css -->
+    <link rel="stylesheet" href="navbar.css">
+    <!-- footer css -->
+    <link rel="stylesheet" href="footer.css">
+    <!-- this page css -->
+    <link rel="stylesheet" href="calculator.css">
+    <!-- external link - extra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logoText"><a href="https://harsh-jagtap.github.io/Home-Page/">Harshree Development</a> </div>
+        <div id="category" class="resp">
+            <ul class="ul">
+                <li class="navi"><a href="https://harsh-jagtap.github.io/Home-Page/">Home</a></li>
+                <li class="navi"><a href="https://harsh-jagtap.github.io/My-Project/">My Project</a></li>
+                <li class="navi"><a href="#">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="section">
+        <div class="calculator">
+            <p>standard calculator</p>
+            <div class="text-change">
+                <input type="text" id="input">
+                <div class="output"></div>
+            </div>
+            <div class="button">
+                <table>
+                    <tr>
+                        <td><button>AC</button></td>
+                        <td><button>C</button></td>
+                        <td><button>%</button></td>
+                        <td><button>/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>7</button></td>
+                        <td><button>8</button></td>
+                        <td><button>9</button></td>
+                        <td><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>4</button></td>
+                        <td><button>5</button></td>
+                        <td><button>6</button></td>
+                        <td><button>-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>1</button></td>
+                        <td><button>2</button></td>
+                        <td><button>3</button></td>
+                        <td><button>+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button id="empty"></button></td>
+                        <td><button>0</button></td>
+                        <td><button>.</button></td>
+                        <td><button>=</button></td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div class="tip">Tip :
+                <ul>
+                    <li>It may have many bugs but you can handle it.</li>
+                    <li>If it does't work you press "AC" or "C" for clear everything.</li>
+                    <li>Thank you</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="foot">copyright &copy https://github.com/harsh-jagtap . All rights reserved.</div>
+    </footer>
+</body>
+<script src="calculator.js"></script>
+
+</html>
