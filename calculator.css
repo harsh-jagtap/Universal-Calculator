@@ -4,6 +4,9 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+
+/* of body */
+
 body {
     background-image: linear-gradient( 102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);
     background-size: 500%;
@@ -19,30 +22,67 @@ body {
     }
 }
 
-.calculator {
+
+/* main section */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* selecting calculator type */
+
+.selectCalculator {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.select {
+    width: 280px;
+    height: 30px;
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* standard calculator */
+
+.standardCalculator {
     display: grid;
     grid-template-columns: 1fr;
     width: min-content;
     padding: 10px;
-    margin: 20px auto;
+    margin: auto;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 30px;
     border-radius: 15px;
     border: 2px solid black;
-}
-
-table {
-    margin: auto;
-    margin-top: 20px;
-}
-
-button {
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: auto;
-    padding: 5px 20px;
-    font-size: 20px;
-    width: 70px;
 }
 
 #input {
@@ -54,16 +94,53 @@ button {
     border: 2px solid black;
 }
 
+table {
+    margin: auto;
+    margin-top: 20px;
+}
+
+td button {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5px 20px;
+    font-size: 20px;
+    width: 70px;
+}
+
 #empty {
     display: none;
 }
 
 hr {
-    margin: 10px;
+    margin: 5%;
 }
 
 .tip {
     margin: auto;
     width: 80%;
     font-size: 18px;
+}
+
+
+/* pythagorean theorem */
+
+.pythagoreanTheorem {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.input1 {
+    padding: 5px;
+    margin: 3px;
+    font-size: 20px;
+}
+
+.output2 {
+    font-size: 30px;
 }

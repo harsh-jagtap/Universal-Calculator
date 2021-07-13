@@ -8,8 +8,6 @@
     <title>Harshree Development-calculator</title>
     <!-- navbar css -->
     <link rel="stylesheet" href="navbar.css">
-    <!-- footer css -->
-    <link rel="stylesheet" href="footer.css">
     <!-- this page css -->
     <link rel="stylesheet" href="calculator.css">
     <!-- external link - extra -->
@@ -42,12 +40,21 @@
             </ul>
         </div>
     </nav>
-    <div class="section">
-        <div class="calculator">
+    <section class="section">
+        <div class="selectCalculator">
+            <select class="select">
+                <optgroup label="Normal Calculator">
+                    <option value="standardCalculator">Standard Calculator</option>
+                </optgroup>
+                <optgroup label="Math Calculator">
+                    <option value="pythagoreanTheorem">Pythagorean Theorem</option>
+                </optgroup>
+            </select>
+        </div>
+        <div id="standardCalculator" class="standardCalculator dis">
             <p>standard calculator</p>
             <div class="text-change">
                 <input type="text" id="input">
-                <div class="output"></div>
             </div>
             <div class="button">
                 <table>
@@ -92,11 +99,19 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <footer id="footer">
-        <div class="foot">copyright &copy https://github.com/harsh-jagtap . All rights reserved.</div>
-    </footer>
+        <div id="pythagoreanTheorem" class="pythagoreanTheorem dis">
+            <p>Pythagorean Theorem</p>
+            <input type="number" class="input1" id="input2p1" min="0" max="180" placeholder="leg B">
+            <input type="number" class="input1" id="input2p2" min="0" max="180" placeholder="leg A">
+            <div class="output2">C = <u><span id="2pT"></span></u></div>
+            <div id="Tip2"></div>
+        </div>
+    </section>
 </body>
+<!-- personal javascript -->
 <script src="calculator.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<!-- selecting system -->
+<script src="selecting system.js"></script>
 
 </html>
