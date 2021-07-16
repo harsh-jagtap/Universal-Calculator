@@ -5,6 +5,46 @@
 }
 
 
+/* some of common */
+
+.container {
+    width: min-content;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+.titleCalc {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 0;
+}
+
+.input {
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.output {
+    font-size: 30px;
+}
+
+.tip {
+    margin: auto;
+    width: 80%;
+    font-size: 18px;
+}
+
+
 /* of body */
 
 body {
@@ -43,30 +83,14 @@ body {
 }
 
 .select {
-    width: 280px;
-    height: 30px;
-    margin-top: 5px;
+    width: 325px;
+    margin-top: 10px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    padding: 5px;
     border: 2px solid black;
     border-radius: 15px;
     font-size: 20px;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 
@@ -75,23 +99,6 @@ body {
 .standardCalculator {
     display: grid;
     grid-template-columns: 1fr;
-    width: min-content;
-    padding: 10px;
-    margin: auto;
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 30px;
-    border-radius: 15px;
-    border: 2px solid black;
-}
-
-#input {
-    padding: 2px;
-    font-size: 20px;
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    border: 2px solid black;
 }
 
 table {
@@ -116,31 +123,13 @@ hr {
     margin: 5%;
 }
 
-.tip {
-    margin: auto;
-    width: 80%;
-    font-size: 18px;
-}
-
 
 /* pythagorean theorem */
 
 .pythagoreanTheorem {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 30px;
-    margin-bottom: 50px;
 }
 
-.input1 {
-    padding: 5px;
-    margin: 3px;
-    font-size: 20px;
-}
 
-.output2 {
-    font-size: 30px;
-}
+/* square root */

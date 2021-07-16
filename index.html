@@ -41,6 +41,7 @@
         </div>
     </nav>
     <section class="section">
+        <!-- Selecting type -->
         <div class="selectCalculator">
             <select class="select">
                 <optgroup label="Normal Calculator">
@@ -48,13 +49,16 @@
                 </optgroup>
                 <optgroup label="Math Calculator">
                     <option value="pythagoreanTheorem">Pythagorean Theorem</option>
+                    <option value="square">Square</option>
+                    <option value="squareroot">Square Root</option>
                 </optgroup>
             </select>
         </div>
-        <div id="standardCalculator" class="standardCalculator dis">
-            <p>standard calculator</p>
+        <!-- Normal Calculator -->
+        <div id="standardCalculator" class="standardCalculator container dis">
+            <p class="titleCalc">standard calculator</p>
             <div class="text-change">
-                <input type="text" id="input">
+                <input type="text" class="input" id="input1">
             </div>
             <div class="button">
                 <table>
@@ -93,18 +97,43 @@
             <hr>
             <div class="tip">Tip :
                 <ul>
+                    <li>Enter number only</li>
                     <li>It may have many bugs but you can handle it.</li>
                     <li>If it does't work you press "AC" or "C" for clear everything.</li>
                     <li>Thank you</li>
                 </ul>
             </div>
         </div>
-        <div id="pythagoreanTheorem" class="pythagoreanTheorem dis">
-            <p>Pythagorean Theorem</p>
-            <input type="number" class="input1" id="input2p1" min="0" max="180" placeholder="leg B">
-            <input type="number" class="input1" id="input2p2" min="0" max="180" placeholder="leg A">
-            <div class="output2">C = <u><span id="2pT"></span></u></div>
-            <div id="Tip2"></div>
+        <!-- Pythagorean Theorem -->
+        <div id="pythagoreanTheorem" class="pythagoreanTheorem container dis">
+            <p class="titleCalc">Pythagorean Theorem</p>
+            <input type="number" class="input" id="input2p1" min="0" max="180" placeholder="leg B">
+            <input type="number" class="input" id="input2p2" min="0" max="180" placeholder="leg A">
+            <div class="output">leg C = <span id="2pT"></span></div>
+            <div class="tip">
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Square Root -->
+        <div id="squareroot" class="dis container">
+            <p class="titleCalc">Square Root</p>
+            <input class="input" id="input3" min="0" type="number" placeholder="Enter number ">
+            <p class="output">
+                = <span id="output3"></span>
+            </p>
+            <div class="tip">
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Square -->
+        <div id="square" class="container dis">
+            <p class="titleCalc">Square</p>
+            <input class="input" id="input4" type="number" min="0">
+            <div class="output">=<span id="output4"></span></div>
         </div>
     </section>
 </body>
