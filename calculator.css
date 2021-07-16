@@ -9,7 +9,7 @@
 
 .container {
     width: min-content;
-    padding: 20px;
+    padding: auto;
     margin: auto;
     margin-bottom: 50px;
     border-radius: 15px;
