@@ -48,6 +48,7 @@
                     <option value="standardCalculator">Standard Calculator</option>
                 </optgroup>
                 <optgroup label="Math Calculator">
+                    <option value="power">Power</option>
                     <option value="pythagoreanTheorem">Pythagorean Theorem</option>
                     <option value="square">Square</option>
                     <option value="squareroot">Square Root</option>
@@ -58,7 +59,7 @@
         <div id="standardCalculator" class="standardCalculator container dis">
             <p class="titleCalc">standard calculator</p>
             <div class="text-change">
-                <input type="text" class="input" id="input1">
+                <input type="number" class="input" id="input1" placeholder="Enter problem">
             </div>
             <div class="button">
                 <table>
@@ -94,23 +95,25 @@
                     </tr>
                 </table>
             </div>
-            <hr>
-            <div class="tip">Tip :
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
                 <ul>
                     <li>Enter number only</li>
                     <li>It may have many bugs but you can handle it.</li>
                     <li>If it does't work you press "AC" or "C" for clear everything.</li>
-                    <li>Thank you</li>
                 </ul>
             </div>
         </div>
         <!-- Pythagorean Theorem -->
         <div id="pythagoreanTheorem" class="pythagoreanTheorem container dis">
             <p class="titleCalc">Pythagorean Theorem</p>
-            <input type="number" class="input" id="input2p1" min="0" max="180" placeholder="leg B">
-            <input type="number" class="input" id="input2p2" min="0" max="180" placeholder="leg A">
+            <input type="number" class="input" id="input2p1" min="0" max="180" placeholder="leg A">
+            <input type="number" class="input" id="input2p2" min="0" max="180" placeholder="leg B">
             <div class="output">leg C = <span id="2pT"></span></div>
+            <hr class="divider">
             <div class="tip">
+                <p class="titleTip">Tip</p>
                 <ul>
                     <li>Enter number only</li>
                 </ul>
@@ -120,10 +123,10 @@
         <div id="squareroot" class="dis container">
             <p class="titleCalc">Square Root</p>
             <input class="input" id="input3" min="0" type="number" placeholder="Enter number ">
-            <p class="output">
-                = <span id="output3"></span>
-            </p>
+            <p class="output"> = <span id="output3"></span></p>
+            <hr class="divider">
             <div class="tip">
+                <p class="titleTip">Tip</p>
                 <ul>
                     <li>Enter number only</li>
                 </ul>
@@ -132,8 +135,29 @@
         <!-- Square -->
         <div id="square" class="container dis">
             <p class="titleCalc">Square</p>
-            <input class="input" id="input4" type="number" min="0">
-            <div class="output">=<span id="output4"></span></div>
+            <input class="input" id="input4" type="number" min="0" placeholder="Enter number">
+            <div class="output"> = <span id="output4"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Power -->
+        <div id="power" class="container dis">
+            <p class="titleCalc">Power</p>
+            <input class="input" id="input5p1" type="number" min="0" placeholder="Enter base number">
+            <input class="input" id="input5p2" type="number" min="0" placeholder="Enter exponent or power">
+            <div id="output5" class="output"></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
         </div>
     </section>
 </body>

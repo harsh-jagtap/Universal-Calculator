@@ -9,7 +9,7 @@
 
 .container {
     width: min-content;
-    padding: auto;
+    padding: 15px 10px;
     margin: auto;
     margin-bottom: 50px;
     border-radius: 15px;
@@ -36,6 +36,18 @@
 
 .output {
     font-size: 30px;
+    margin-left: 20px;
+}
+
+.divider {
+    margin: 15px 15px;
+}
+
+.titleTip {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 0;
 }
 
 .tip {
@@ -119,10 +131,6 @@ td button {
     display: none;
 }
 
-hr {
-    margin: 5%;
-}
-
 
 /* pythagorean theorem */
 
@@ -130,6 +138,3 @@ hr {
     display: flex;
     flex-direction: column;
 }
-
-
-/* square root */

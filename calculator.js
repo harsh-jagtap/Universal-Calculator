@@ -78,13 +78,32 @@ function square() {
     let output4 = document.getElementById("output4");
     output4.innerText = result4;
 }
-
-function reapeatingSquare(params) {
+// reapeating square
+function reapeatingSquare() {
     setInterval(() => {
         square();
     }, 100);
 }
 
+
+// Power
+// resource for square
+function power() {
+    let input5p1 = document.getElementById("input5p1");
+    let input5p2 = document.getElementById("input5p2");
+    let output5 = document.getElementById("output5");
+
+    // logic
+    let result5 = Math.pow(input5p1.value, input5p2.value);
+    output5.innerHTML = `Power of <span> ${input5p1.value}<sup class="super5">${input5p2.value} </sup> </span> = ${result5}<span></span>`
+}
+// console.log(out5);
+// reapeating square
+function reapeatingPower() {
+    setInterval(() => {
+        power();
+    }, 100);
+}
 
 // Selecting System (ss) 
 // resource for selecting system
@@ -98,5 +117,7 @@ select.addEventListener("change", function() {
         repeatingSquareRoot();
     } else if (select.value == "square") {
         reapeatingSquare();
+    } else if (select.value == "power") {
+        reapeatingPower();
     }
 })
