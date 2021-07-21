@@ -41,76 +41,55 @@
         </div>
     </nav>
     <section class="section">
-        <!-- Selecting type -->
+        <!-- Selecting type (ss)-->
         <div class="selectCalculator">
             <select class="select">
                 <optgroup label="Normal Calculator">
                     <option value="standardCalculator">Standard Calculator</option>
                 </optgroup>
                 <optgroup label="Math Calculator">
+                    <!-- Area -->
+                    <option value="areaCircle">Area : Circle</option>
+                    <option value="areaParallelogram">Area : Parallelogram</option>
+                    <option value="areaRectangle">Area : Rectanlge</option>
+                    <option value="areaSquare">Area : Square</option>
+                    <option value="areaTrapezium">Area : trapezium</option>
+                    <option value="areaTriangle">Area : Triangle</option>
+                    <!--  -->
                     <option value="power">Power</option>
-                    <option value="pythagoreanTheorem">Pythagorean Theorem</option>
+                    <!-- Pythagorean -->
+                    <option value="pythagoreanHypotenuse">Pythagorean : Hypotenuse</option>
+                    <option value="pythagoreanSide">Pythagorean : Side</option>
+                    <!-- Maths -->
                     <option value="square">Square</option>
                     <option value="squareroot">Square Root</option>
                 </optgroup>
             </select>
         </div>
+
+        <!-- 1 -->
         <!-- Normal Calculator -->
         <div id="standardCalculator" class="standardCalculator container dis">
-            <p class="titleCalc">standard calculator</p>
-            <div class="text-change">
-                <input type="number" class="input" id="input1" placeholder="Enter problem">
-            </div>
-            <div class="button">
-                <table>
-                    <tr>
-                        <td><button>AC</button></td>
-                        <td><button>C</button></td>
-                        <td><button>%</button></td>
-                        <td><button>/</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>7</button></td>
-                        <td><button>8</button></td>
-                        <td><button>9</button></td>
-                        <td><button>X</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>4</button></td>
-                        <td><button>5</button></td>
-                        <td><button>6</button></td>
-                        <td><button>-</button></td>
-                    </tr>
-                    <tr>
-                        <td><button>1</button></td>
-                        <td><button>2</button></td>
-                        <td><button>3</button></td>
-                        <td><button>+</button></td>
-                    </tr>
-                    <tr>
-                        <td><button id="empty"></button></td>
-                        <td><button>0</button></td>
-                        <td><button>.</button></td>
-                        <td><button>=</button></td>
-                    </tr>
-                </table>
-            </div>
+            <p class="titleCalc">Standard Calculator</p>
+            <input type="text" class="input" id="input1" placeholder="Enter problem">
+            <div class="output"> = <span class="output1p1" id="output1">50</span></div>
             <hr class="divider">
             <div class="tip">
                 <p class="titleTip">Tip</p>
                 <ul>
                     <li>Enter number only</li>
                     <li>It may have many bugs but you can handle it.</li>
-                    <li>If it does't work you press "AC" or "C" for clear everything.</li>
                 </ul>
             </div>
         </div>
-        <!-- Pythagorean Theorem -->
-        <div id="pythagoreanTheorem" class="pythagoreanTheorem container dis">
-            <p class="titleCalc">Pythagorean Theorem</p>
-            <input type="number" class="input" id="input2p1" min="0" max="180" placeholder="leg A">
-            <input type="number" class="input" id="input2p2" min="0" max="180" placeholder="leg B">
-            <div class="output">leg C = <span id="2pT"></span></div>
+
+        <!-- 2 -->
+        <!-- Pythagorean Theorem : Hypotenuse -->
+        <div id="pythagoreanHypotenuse" class="pythagoreanTheorem container dis">
+            <p class="titleCalc">Pythagorean Theorem : Hypotenuse</p>
+            <input type="number" class="input" id="input2p1" min="0" placeholder="leg A">
+            <input type="number" class="input" id="input2p2" min="0" placeholder="leg B">
+            <div class="output">leg C / Hypotenuse = <span id="2pT"></span></div>
             <hr class="divider">
             <div class="tip">
                 <p class="titleTip">Tip</p>
@@ -119,6 +98,8 @@
                 </ul>
             </div>
         </div>
+
+        <!-- 3 -->
         <!-- Square Root -->
         <div id="squareroot" class="dis container">
             <p class="titleCalc">Square Root</p>
@@ -132,6 +113,8 @@
                 </ul>
             </div>
         </div>
+
+        <!-- 4 -->
         <!-- Square -->
         <div id="square" class="container dis">
             <p class="titleCalc">Square</p>
@@ -145,12 +128,127 @@
                 </ul>
             </div>
         </div>
+
+        <!-- 5 -->
         <!-- Power -->
         <div id="power" class="container dis">
             <p class="titleCalc">Power</p>
             <input class="input" id="input5p1" type="number" min="0" placeholder="Enter base number">
             <input class="input" id="input5p2" type="number" min="0" placeholder="Enter exponent or power">
             <div id="output5" class="output"></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <!-- Pythagorean Theorem : side A -->
+        <div id="pythagoreanSide" class="pythagoreanTheorem container dis">
+            <p class="titleCalc">Pythagorean Theorem : Side</p>
+            <input type="number" class="input" id="input6p1" min="0" placeholder="leg A">
+            <input type="number" class="input" id="input6p2" min="0" placeholder="leg C / Hypotenuse ">
+            <div class="output">leg B = <span id="output6"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                    <li>leg A is Always logner</li>
+                    <li>leg C is Always shorter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <!-- Area : Square -->
+        <div id="areaSquare" class="container dis">
+            <p class="titleCalc">Area of Square</p>
+            <input class="input" id="input7" type="number" min="0" placeholder="Enter number">
+            <div class="output">Area of Square = <span id="output7"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <!-- Area : Reactangle -->
+        <div id="areaRectangle" class="container dis">
+            <p class="titleCalc">Area of Reactangle</p>
+            <input class="input" id="input8p1" type="number" min="0" placeholder="Enter Length">
+            <input class="input" id="input8p2" type="number" min="0" placeholder="Enter Width">
+            <div class="output">Area of Rectanlge = <span id="output8"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <!-- Area : Trianlge -->
+        <div id="areaTriangle" class="container dis">
+            <p class="titleCalc">Area of Triangle</p>
+            <input class="input" id="input9p1" type="number" min="0" placeholder="Enter Base">
+            <input class="input" id="input9p2" type="number" min="0" placeholder="Enter Height">
+            <div class="output">Area of Triangle = <span id="output9"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <!-- Area : Circle -->
+        <div id="areaCircle" class="container dis">
+            <p class="titleCalc">Area of Circle</p>
+            <input class="input" id="input10" type="number" min="0" placeholder="Enter radius">
+            <div class="output">Area of Circle = <span id="output10"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <!-- Area : Parallelogram -->
+        <div id="areaParallelogram" class="container dis">
+            <p class="titleCalc">Area of Parallelogram</p>
+            <input class="input" id="input11p1" type="number" min="0" placeholder="Enter Base">
+            <input class="input" id="input11p2" type="number" min="0" placeholder="Enter Height">
+            <div class="output">Area of Parallelogram = <span id="output11"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <!-- Area : trapezium -->
+        <div id="areaTrapezium" class="container dis">
+            <p class="titleCalc">Area of Trapezium</p>
+            <input class="input" id="input12p1" type="number" min="0" placeholder="Enter Base 1">
+            <input class="input" id="input12p2" type="number" min="0" placeholder="Enter Base 2">
+            <input class="input" id="input12p3" type="number" min="0" placeholder="Enter Height">
+            <div class="output">Area of trapezium = <span id="output12"></span></div>
             <hr class="divider">
             <div class="tip">
                 <p class="titleTip">Tip</p>

@@ -113,6 +113,15 @@ body {
     grid-template-columns: 1fr;
 }
 
+.stdCalcButton {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    height: 30px;
+    width: 50px;
+}
+
 table {
     margin: auto;
     margin-top: 20px;
