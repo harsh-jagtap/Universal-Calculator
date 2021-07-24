@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DN5TCP214"></script>
     <script>
@@ -45,24 +44,36 @@
         <div class="selectCalculator">
             <select class="select">
                 <optgroup label="Normal Calculator">
+                    <!-- Normal Calculator -->
                     <option value="standardCalculator">Standard Calculator</option>
                 </optgroup>
                 <optgroup label="Math Calculator">
+                    <!-- Maths -->
+                    <option value="power">Power</option>
+                    <option value="square">Square</option>
+                    <option value="squareroot">Square Root</option>
+                </optgroup>
+                <optgroup label="Area"> 
                     <!-- Area -->
                     <option value="areaCircle">Area : Circle</option>
                     <option value="areaParallelogram">Area : Parallelogram</option>
                     <option value="areaRectangle">Area : Rectanlge</option>
                     <option value="areaSquare">Area : Square</option>
                     <option value="areaTrapezium">Area : trapezium</option>
-                    <option value="areaTriangle">Area : Triangle</option>
-                    <!--  -->
-                    <option value="power">Power</option>
-                    <!-- Pythagorean -->
+                    <option value="areaTriangleBase">Area : Triangle Base & Height</option>
+                    <option value="areaTriangleSide">Area : Triangle Side</option>
+                </optgroup>
+                <optgroup label="Perimeter">
+                    <!-- Perimeter -->
+                    <option value="perimeterCircle">Perimeter : Circle</option>
+                    <option value="perimeterRectangle">Perimeter : Rectanlge</option>
+                    <option value="perimeterSquare">Perimeter : Square</option>
+                    <option value="perimeterTriangle">Perimeter : Triangle</option>
+                </optgroup>
+                <optgroup label="Pythagorean Theorem">                      
+                        <!-- Pythagorean theorem-->
                     <option value="pythagoreanHypotenuse">Pythagorean : Hypotenuse</option>
                     <option value="pythagoreanSide">Pythagorean : Side</option>
-                    <!-- Maths -->
-                    <option value="square">Square</option>
-                    <option value="squareroot">Square Root</option>
                 </optgroup>
             </select>
         </div>
@@ -104,7 +115,7 @@
         <div id="squareroot" class="dis container">
             <p class="titleCalc">Square Root</p>
             <input class="input" id="input3" min="0" type="number" placeholder="Enter number ">
-            <p class="output"> = <span id="output3"></span></p>
+            <div class="output" id="output3"></div>
             <hr class="divider">
             <div class="tip">
                 <p class="titleTip">Tip</p>
@@ -119,7 +130,7 @@
         <div id="square" class="container dis">
             <p class="titleCalc">Square</p>
             <input class="input" id="input4" type="number" min="0" placeholder="Enter number">
-            <div class="output"> = <span id="output4"></span></div>
+            <div class="output" id="output4"></div>
             <hr class="divider">
             <div class="tip">
                 <p class="titleTip">Tip</p>
@@ -195,8 +206,8 @@
         </div>
 
         <!-- 9 -->
-        <!-- Area : Trianlge -->
-        <div id="areaTriangle" class="container dis">
+        <!-- Area : Trianlge Base & Height -->
+        <div id="areaTriangleBase" class="container dis">
             <p class="titleCalc">Area of Triangle</p>
             <input class="input" id="input9p1" type="number" min="0" placeholder="Enter Base">
             <input class="input" id="input9p2" type="number" min="0" placeholder="Enter Height">
@@ -249,6 +260,86 @@
             <input class="input" id="input12p2" type="number" min="0" placeholder="Enter Base 2">
             <input class="input" id="input12p3" type="number" min="0" placeholder="Enter Height">
             <div class="output">Area of trapezium = <span id="output12"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <!-- Area : Trianlge Side-->
+        <div id="areaTriangleSide" class="container dis">
+            <p class="titleCalc">Area of Triangle</p>
+            <input class="input" id="input13p1" type="number" min="0" placeholder="Enter Side 1">
+            <input class="input" id="input13p2" type="number" min="0" placeholder="Enter Side 2">
+            <input class="input" id="input13p3" type="number" min="0" placeholder="Enter Side 3">
+            <div class="output">Area of Triangle = <span id="output13"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <!-- Perimeter : Square -->
+        <div id="perimeterSquare" class="container dis">
+            <p class="titleCalc">Perimeter of Square</p>
+            <input class="input" id="input14" type="number" min="0" placeholder="Enter Side 1">
+            <div class="output">Perimeter of Square = <span id="output14"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <!-- Perimeter : Rectangle -->
+        <div id="perimeterRectangle" class="container dis">
+            <p class="titleCalc">Perimeter of Rectanlge</p>
+            <input class="input" id="input15p1" type="number" min="0" placeholder="Enter Length">
+            <input class="input" id="input15p2" type="number" min="0" placeholder="Enter Width">
+            <div class="output">Perimeter of Rectanlge = <span id="output15"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <!-- Perimeter : Triangle -->
+        <div id="perimeterTriangle" class="container dis">
+            <p class="titleCalc">Perimeter of Triangle</p>
+            <input class="input" id="input16p1" type="number" min="0" placeholder="Enter Side 1">
+            <input class="input" id="input16p2" type="number" min="0" placeholder="Enter Side 2">
+            <input class="input" id="input16p3" type="number" min="0" placeholder="Enter Side 3">
+            <div class="output">Perimeter of Triangle = <span id="output16"></span></div>
+            <hr class="divider">
+            <div class="tip">
+                <p class="titleTip">Tip</p>
+                <ul>
+                    <li>Enter number only</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <!-- Perimeter : Circle -->
+        <div id="perimeterCircle" class="container dis">
+            <p class="titleCalc">Perimeter of Circle</p>
+            <input class="input" id="input17" type="number" min="0" placeholder="Enter Radius">
+            <div class="output">Perimeter of Circle = <span id="output17"></span></div>
             <hr class="divider">
             <div class="tip">
                 <p class="titleTip">Tip</p>

@@ -40,12 +40,12 @@ function repeatingPythagoreanHypotenuse() {
 // 3. Square Root
 function squareRoot(params) {
     // resource for square root
-    let squareroot = document.querySelector("#input3");
+    let input3 = document.querySelector("#input3");
     let display3 = document.querySelector("#output3");
 
     // logic for square root
-    let result3 = Math.sqrt(squareroot.value);
-    display3.innerText = result3;
+    let result3 = Math.sqrt(input3.value);
+    display3.innerHTML = `Square root of ${input3.value} = ${result3}`;
 }
 // repeating square root
 function repeatingSquareRoot() {
@@ -60,7 +60,8 @@ function square() {
     let input4 = document.getElementById("input4");
     let result4 = Math.pow(input4.value, 2);
     let output4 = document.getElementById("output4");
-    output4.innerText = result4;
+    // displaying
+    output4.innerHTML = `Square of ${input4.value} = ${result4}`;
 }
 // reapeating square
 function reapeatingSquare() {
@@ -150,8 +151,8 @@ function reapeatingAreaRectangle() {
 }
 
 
-// 9. Area : Triangle
-function areaTriangle() {
+// 9. Area : Triangle Base & Heigth
+function areaTriangleBase() {
     let input9p1 = document.getElementById("input9p1");
     let input9p2 = document.getElementById("input9p2");
     let output9 = document.getElementById("output9");
@@ -161,10 +162,10 @@ function areaTriangle() {
     let result9p2 = result9p1 / 2;
     output9.innerText = result9p2;
 }
-// reapeating area of Triangle
-function reapeatingAreaTriangle() {
+// reapeating area of Triangle Base & Height
+function reapeatingAreaTriangleBase() {
     setInterval(() => {
-        areaTriangle();
+        areaTriangleBase();
     }, 100);
 }
 
@@ -217,7 +218,7 @@ function areaTrapezium() {
     let result12p3 = result12p2 / 2;
     output12.innerText = result12p3;
 }
-// reapeating area of Parallelogram
+// reapeating area of Trapezium
 function reapeatingAreaTrapezium() {
     setInterval(() => {
         areaTrapezium();
@@ -226,35 +227,142 @@ function reapeatingAreaTrapezium() {
 
 
 
+// 13. Area : Triangle Side
+function areaTriangleSide() {
+    let input13p1 = Number(document.getElementById("input13p1").value);
+    let input13p2 = Number(document.getElementById("input13p2").value);
+    let input13p3 = Number(document.getElementById("input13p3").value);
+    let output13 = document.getElementById("output13");
+
+    // logic   
+    var semiperimeter = (input13p1 + input13p2 + input13p3) / 2;
+    var calculation = semiperimeter * (semiperimeter - input13p1) * (semiperimeter - input13p2) * (semiperimeter - input13p3);
+    let result13 = Math.sqrt(calculation);
+    output13.innerText = result13;
+}
+// reapeating area of Triangle side
+function reapeatingAreaTriangleSide() {
+    setInterval(() => {
+        areaTriangleSide();
+    }, 100);
+}
+
+
+// 14. Perimeter : Square
+function perimeterSquare() {
+    let input14 = Number(document.getElementById("input14").value);
+    let output14 = document.getElementById("output14");
+
+    // logic
+    let result14 = input14 * 4;
+    output14.innerText = result14;
+}
+// reapeating Perimeter of Square
+function reapeatingPerimeterSquare() {
+    setInterval(() => {
+        perimeterSquare();
+    }, 100);
+}
+
+
+// 15. Perimeter : Rectangle
+function perimeterRectangle() {
+    let input15p1 = Number(document.getElementById("input15p1").value);
+    let input15p2 = Number(document.getElementById("input15p2").value);
+    let output15 = document.getElementById("output15");
+
+    // logic
+    let result15 = (input15p1 + input15p2) * 2;
+    output15.innerText = result15;
+}
+// reapeating Perimeter of Square
+function reapeatingPerimeterRectangle() {
+    setInterval(() => {
+        perimeterRectangle();
+    }, 100);
+}
+
+
+// 16. Perimeter : Triangle
+function perimeterTriangle() {
+    let input16p1 = Number(document.getElementById("input16p1").value);
+    let input16p2 = Number(document.getElementById("input16p2").value);
+    let input16p3 = Number(document.getElementById("input16p3").value);
+    let output16 = document.getElementById("output16");
+
+    // logic
+    let result16 = input16p1 + input16p2 + input16p3;
+    output16.innerText = result16;
+}
+// reapeating Perimeter of Square
+function reapeatingPerimeterTriangle() {
+    setInterval(() => {
+        perimeterTriangle();
+    }, 100);
+}
+
+
+// 17. Perimeter : Circle
+function perimeterCircle() {
+    let input17 = Number(document.getElementById("input17").value);
+    let output17 = document.getElementById("output17");
+
+    // logic
+    let result17 = Math.PI * (input17 * input17);
+    output17.innerText = result17;
+}
+// reapeating Perimeter of Circle
+function reapeatingPerimeterCircle() {
+    setInterval(() => {
+        perimeterCircle();
+    }, 100);
+}
+
+
 // Selecting System (ss) 
 // resource for selecting system
 let select = document.querySelector(".select");
 
 // logic for selecting system
 select.addEventListener("change", function() {
+    // normal Calculator
     if (select.value == "standardCalculator") {
         standardCalculator();
+        // pythagorean Theorem
     } else if (select.value == "pythagoreanHypotenuse") {
         repeatingPythagoreanHypotenuse();
     } else if (select.value == "pythagoreanSide") {
         repeatingPythagoreanSide();
+        // Maths
     } else if (select.value == "squareroot") {
         repeatingSquareRoot();
     } else if (select.value == "square") {
         reapeatingSquare();
     } else if (select.value == "power") {
         reapeatingPower();
+        // Area
     } else if (select.value == "areaSquare") {
         reapeatingAreaSquare();
     } else if (select.value == "areaRectangle") {
         reapeatingAreaRectangle();
-    } else if (select.value == "areaTriangle") {
-        reapeatingAreaTriangle();
+    } else if (select.value == "areaTriangleBase") {
+        reapeatingAreaTriangleBase();
+    } else if (select.value == "areaTriangleSide") {
+        reapeatingAreaTriangleSide();
     } else if (select.value == "areaCircle") {
         reapeatingAreaCircle();
     } else if (select.value == "areaParallelogram") {
         reapeatingAreaParallelogram();
     } else if (select.value == "areaTrapezium") {
         reapeatingAreaTrapezium();
+        // perimeter
+    } else if (select.value == "perimeterSquare") {
+        reapeatingPerimeterSquare();
+    } else if (select.value == "perimeterRectangle") {
+        reapeatingPerimeterRectangle();
+    } else if (select.value == "perimeterTriangle") {
+        reapeatingPerimeterTriangle();
+    } else if (select.value == "perimeterCircle") {
+        reapeatingPerimeterCircle();
     }
 })
